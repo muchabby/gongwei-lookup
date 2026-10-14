@@ -30,6 +30,7 @@ header p { margin-top: 8px; font-size: 13px; opacity: .85; }
   border-radius: 8px; padding: 8px 12px; font-size:13px; cursor:pointer; display:none; }
 .search-box .clear:hover { background:#e8ebf1; }
 #results { max-width: 720px; margin: 12px auto 0; padding: 0 16px; }
+.search-tip { max-width: 720px; margin: 10px auto 0; padding: 0 18px; color: var(--muted); font-size: 12.5px; }
 .chips { max-width: 720px; margin: 14px auto 0; padding: 0 16px;
   display:flex; gap:8px; flex-wrap:wrap; }
 .chip { border:1px solid var(--line); background:#fff; border-radius:999px;
@@ -106,10 +107,11 @@ footer a { color:#8fa3c8; }
 <div class="search-wrap">
   <div class="search-box">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-    <input id="q" type="text" placeholder="输入姓名或会议室，如：王伟、19F-139、201会议室…" autocomplete="off">
+    <input id="q" type="text" placeholder="输入姓名或会议室，如：王伟、淑玲、201会议室…" autocomplete="off">
     <button class="clear" id="clearBtn">清空</button>
   </div>
 </div>
+<div class="search-tip">💡 三个字的名字，只输后两个字（去掉姓）也能查到，如「张淑玲」输「淑玲」</div>
 <div class="chips" id="chips"></div>
 <div id="results" class="hint">↑ 共 <b>996</b> 个工位已收录，输入姓名开始查询</div>
 
