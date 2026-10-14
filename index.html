@@ -53,7 +53,7 @@ header p { margin-top: 8px; font-size: 13px; opacity: .85; }
   font-size:14px; font-weight:700; }
 .hint { text-align:center; color:var(--muted); font-size:13px;
   padding: 26px 0; }
-.map-panel { max-width: 1060px; margin: 26px auto; padding: 0 16px; display:none; }
+.map-panel { max-width: 1060px; margin: 26px auto; padding: 0 16px; display:block; }
 .map-panel .panel { background: var(--card); border-radius: 14px;
   box-shadow: 0 2px 14px rgba(31,35,41,.08); overflow:hidden; }
 .map-tabs { display:flex; flex-wrap:wrap; gap:6px; padding: 12px 14px;
@@ -404,6 +404,8 @@ window.addEventListener('resize', () => { if ($('#mapPanel').style.display === '
 
 initMapPanel();
 renderResults();
+fitView();
+window.addEventListener('load', fitView);
 </script>
 </body>
 </html>
